@@ -13,7 +13,9 @@ const app = fastify().withTypeProvider<ZodTypeProvider>()
 app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
 
-app.register(fastifyCors)
+app.register(fastifyCors, {
+  origin: '*',
+})
 
 // Routes
 app.register(createAccount)
