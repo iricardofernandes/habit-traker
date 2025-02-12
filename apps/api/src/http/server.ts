@@ -7,6 +7,7 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 import { createAccount } from './routes/auth/create-account'
+import { createGoalRoute } from './routes/goals/create-goal'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -19,6 +20,7 @@ app.register(fastifyCors, {
 
 // Routes
 app.register(createAccount)
+app.register(createGoalRoute)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server is running on port 3333')
