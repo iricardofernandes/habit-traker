@@ -8,6 +8,13 @@
       "when": 1733711462250,
       "tag": "0000_wild_dorian_gray",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1739406548172,
+      "tag": "0001_hard_stellaris",
+      "breakpoints": true
     }
   ]
 }
