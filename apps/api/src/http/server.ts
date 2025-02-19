@@ -9,6 +9,7 @@ import {
 import { createAccount } from './routes/auth/create-account'
 import { createGoalRoute } from './routes/goals/create-goal'
 import { getPendingGoalsRoute } from './routes/goals/get-pending-goals'
+import { createCompletionRoute } from './routes/goals/create-goal-completion'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -23,6 +24,7 @@ app.register(fastifyCors, {
 app.register(createAccount)
 app.register(createGoalRoute)
 app.register(getPendingGoalsRoute)
+app.register(createCompletionRoute)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server is running on port 3333')
